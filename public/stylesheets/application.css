@@ -96,6 +96,10 @@ a {
   margin:0 0 -1px;
 }
 
+#todos li.complete{
+  background:#f0f0f0;
+}
+
 .action{
   padding: 5px;
 }

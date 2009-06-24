@@ -1,6 +1,7 @@
 class Todo < ActiveRecord::Base
-  
-  
+  def complete?
+    complete
+  end  
   def complete
     !self.completed_at.nil?
   end
