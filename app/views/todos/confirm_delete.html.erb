@@ -1,0 +1,8 @@
+<fieldset>
+  <legend>Delete Confirmation</legend>
+  <% form_for @todo, :html => {:method => :delete, :class => 'centered'} do |f| -%>
+    <p><b>Are you sure you want to delete</b> '<%= @todo.name %>'<b>?</b></p>
+    <%= f.submit('Yes') %> - or - <%= link_to "No", todos_path %>
+  <% end -%>
+  
+</fieldset>
