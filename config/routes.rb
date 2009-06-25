@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
                 :collection => {:update_all => :put}, 
                 :member => {:confirm_delete => :get}
 
+  map.resources :todonts
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

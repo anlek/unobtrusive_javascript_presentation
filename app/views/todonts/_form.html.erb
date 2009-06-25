@@ -1,0 +1,11 @@
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :rows => 4 %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %> or <%= link_to "Cancel", todos_path %>
+  </p>

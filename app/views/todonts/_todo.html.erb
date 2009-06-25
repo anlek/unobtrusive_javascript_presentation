@@ -1,0 +1,25 @@
+<%- content_tag_for(:li, todo, :class => "#{"complete" if todo.complete?}") do -%>
+  <% fields_for :todos, todo, :index => todo.id do |todo_fields| %>
+    <%= todo_fields.check_box(:complete) %>
+  <% end %>
+  <%= observe_field "todos_#{todo.id}_complete", 
+                    :url => todont_path(todo), 
+                    :method => :put, 
+                    :with => "'todo[complete]=' + element.checked",
+                    :success => "
+                                var li = element.up('li')
+                                if(element.checked){
+                                   li.addClassName('complete')
+                                 }else{
+                                    li.removeClassName('complete')
+                                 };
+                                 li.highlight(); 
+                                 " %>
+ 
+
+  <span class="name"><%= todo.name %></span>
+  <div class="controls">
+    <%= link_to "Edit", edit_todont_path(todo) %> |
+    <%= link_to "Delete", todont_path(todo), :method => :delete, :confirm => "Are you sure you want to remove '#{todo.name}'?" %>
+  </div>
+<%- end -%>

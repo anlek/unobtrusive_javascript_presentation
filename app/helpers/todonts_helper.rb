@@ -1,0 +1,2 @@
+module TodontsHelper
+end

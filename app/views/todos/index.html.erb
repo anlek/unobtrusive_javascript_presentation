@@ -1,10 +1,11 @@
 <% title "Listing Todos" %>
+<% javascript('behaviours/todo_list', 'todos') %>
 
 <% form_tag(update_all_todos_path, {:class => "form", :method => :put}) do %>
   <ul id="todos">
     <%= render(:partial => "todo", :collection => @todos) %>
   </ul>
-  <div class="action">
+  <div id="todos_action">
     <%= submit_tag "Update Completion", :class => 'button', :id => 'update_all_todos' %>  
   </div>
 <% end -%>

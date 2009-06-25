@@ -1,0 +1,6 @@
+<% title "Editing '#{@todo.name}'" %>
+
+<% form_for(@todo, :url => todont_path(@todo), :html => {:method => :put}) do |f| %>
+  <%= f.error_messages %>
+<%= render :partial => "form", :locals => {:f => f} %>
+<% end %>
