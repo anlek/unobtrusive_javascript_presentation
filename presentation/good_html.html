@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Listing Todos :: The right way</title>
+    <link href="/stylesheets/application.css?1245875096" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/prototype.js?1245802431" type="text/javascript"></script>
+    <script src="/javascripts/effects.js?1245802431" type="text/javascript"></script>
+    <script src="/javascripts/dragdrop.js?1245802431" type="text/javascript"></script>
+    <script src="/javascripts/controls.js?1245802431" type="text/javascript"></script>
+    <script src="/javascripts/lowpro.js?1239727258" type="text/javascript"></script>
+    <script src="/javascripts/application.js?1245802431" type="text/javascript"></script>
+    <script src="/javascripts/behaviours/todo_list.js?1245896014" type="text/javascript"></script>
+    <script src="/javascripts/todos.js?1245876078" type="text/javascript"></script>
+  </head>
+  <body class="good">
+    <div id="container">
+      <div id="nav">
+        <a href="/todonts">Bad todos</a>
+      </div>
+
+      <h1>Listing Todos</h1>
+      <form action="/todos/update_all" class="form" method="post">
+        <div style="margin:0;padding:0">
+          <input name="_method" type="hidden" value="put" />
+          <input name="authenticity_token" type="hidden" value="wNqAr3/4sRWFEV3QAT//L8gNkO35Re2impKlBkbxxYQ=" />
+        </div>
+        <ul id="todos">
+          <li class="todo" id="todo_1">
+            <input name="todos[1][complete]" type="hidden" value="0" /><input id="todos_1_complete" name="todos[1][complete]" type="checkbox" value="1" />
+            <span class="name">Take out Dog</span>
+      
+            <div class="controls">
+              <a href="/todos/1/edit">Edit</a> |
+              <a href="/todos/1/confirm_delete" class="delete">Delete</a>
+            </div>
+          </li>
+          <li class="todo complete" id="todo_4">
+              <input name="todos[4][complete]" type="hidden" value="0" /><input checked="checked" id="todos_4_complete" name="todos[4][complete]" type="checkbox" value="1" />
+            <span class="name">Clean Car</span>
+          
+            <div class="controls">
+              <a href="/todos/4/edit">Edit</a> |
+              <a href="/todos/4/confirm_delete" class="delete">Delete</a>
+            </div>
+          </li>
+          <li class="todo" id="todo_6">
+            <input name="todos[6][complete]" type="hidden" value="0" /><input id="todos_6_complete" name="todos[6][complete]" type="checkbox" value="1" />
+            <span class="name">Call Bill</span>
+          
+            <div class="controls">
+              <a href="/todos/6/edit">Edit</a> |
+              <a href="/todos/6/confirm_delete" class="delete">Delete</a>
+            </div>
+          </li>
+          <li class="todo complete" id="todo_7">
+            <input name="todos[7][complete]" type="hidden" value="0" /><input checked="checked" id="todos_7_complete" name="todos[7][complete]" type="checkbox" value="1" />
+            <span class="name">Buy 1% Milk</span>
+          
+            <div class="controls">
+              <a href="/todos/7/edit">Edit</a> |
+              <a href="/todos/7/confirm_delete" class="delete">Delete</a>
+            </div>
+          </li>
+          <li class="todo complete" id="todo_8">
+            <input name="todos[8][complete]" type="hidden" value="0" /><input checked="checked" id="todos_8_complete" name="todos[8][complete]" type="checkbox" value="1" />
+            <span class="name">Stop and smell the flowers</span>
+            <div class="controls">
+          
+              <a href="/todos/8/edit">Edit</a> |
+              <a href="/todos/8/confirm_delete" class="delete">Delete</a>
+            </div>
+          </li>
+        </ul>
+        <div id="todos_action">
+          <input class="button" id="update_all_todos" name="commit" type="submit" value="Update Completion" />  
+        </div>
+      </form>
+      <p>
+        <a href="/todos/new">New todo</a>  
+      </p>
+    </div>
+  </body>
+</html>

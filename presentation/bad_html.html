@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Listing Todos :: The wrong way</title>
+    <link href="/stylesheets/application.css?1245875096" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/prototype.js?1245802431" type="text/javascript"></script>
+    <script src="/javascripts/effects.js?1245802431" type="text/javascript"></script>
+    <script src="/javascripts/dragdrop.js?1245802431" type="text/javascript"></script>
+    <script src="/javascripts/controls.js?1245802431" type="text/javascript"></script>
+    <script src="/javascripts/application.js?1245802431" type="text/javascript"></script>
+  </head>
+  <body class="bad">
+    <div id="container">
+      
+      <div id="nav">
+        <a href="/todos">Good todos</a>
+      </div>
+      
+        <h1>Listing Todos</h1>
+      
+        <ul id="todos">
+          <li class="todo" id="todo_1">  
+            <input name="todos[1][complete]" type="hidden" value="0" /><input id="todos_1_complete" name="todos[1][complete]" type="checkbox" value="1" />
+          
+          <script type="text/javascript">
+        //<![CDATA[
+        new Form.Element.EventObserver('todos_1_complete', function(element, value) {new Ajax.Request('/todonts/1', {asynchronous:true, evalScripts:true, method:'put', onSuccess:function(request){
+                                        var li = element.up('li')
+                                        if(element.checked){
+                                           li.addClassName('complete')
+                                         }else{
+                                            li.removeClassName('complete')
+                                         };
+                                         li.highlight(); 
+                                         }, parameters:'todo[complete]=' + element.checked + '&authenticity_token=' + encodeURIComponent('wNqAr3/4sRWFEV3QAT//L8gNkO35Re2impKlBkbxxYQ=')})})
+        //]]>
+        </script>
+         
+        
+          <span class="name">Take out Dog</span>
+          <div class="controls">
+            <a href="/todonts/1/edit">Edit</a> |
+            <a href="/todonts/1" onclick="if (confirm('Are you sure you want to remove \'Take out Dog\'?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'wNqAr3/4sRWFEV3QAT//L8gNkO35Re2impKlBkbxxYQ='); f.appendChild(s);f.submit(); };return false;">Delete</a>
+        
+          </div>
+        </li><li class="todo complete" id="todo_4">  
+            <input name="todos[4][complete]" type="hidden" value="0" /><input checked="checked" id="todos_4_complete" name="todos[4][complete]" type="checkbox" value="1" />
+          
+          <script type="text/javascript">
+        //<![CDATA[
+        new Form.Element.EventObserver('todos_4_complete', function(element, value) {new Ajax.Request('/todonts/4', {asynchronous:true, evalScripts:true, method:'put', onSuccess:function(request){
+                                        var li = element.up('li')
+                                        if(element.checked){
+                                           li.addClassName('complete')
+                                         }else{
+                                            li.removeClassName('complete')
+                                         };
+                                         li.highlight(); 
+                                         }, parameters:'todo[complete]=' + element.checked + '&authenticity_token=' + encodeURIComponent('wNqAr3/4sRWFEV3QAT//L8gNkO35Re2impKlBkbxxYQ=')})})
+        //]]>
+        </script>
+         
+        
+          <span class="name">Clean Car</span>
+          <div class="controls">
+            <a href="/todonts/4/edit">Edit</a> |
+            <a href="/todonts/4" onclick="if (confirm('Are you sure you want to remove \'Clean Car\'?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'wNqAr3/4sRWFEV3QAT//L8gNkO35Re2impKlBkbxxYQ='); f.appendChild(s);f.submit(); };return false;">Delete</a>
+        
+          </div>
+        </li><li class="todo" id="todo_6">  
+            <input name="todos[6][complete]" type="hidden" value="0" /><input id="todos_6_complete" name="todos[6][complete]" type="checkbox" value="1" />
+          
+          <script type="text/javascript">
+        //<![CDATA[
+        new Form.Element.EventObserver('todos_6_complete', function(element, value) {new Ajax.Request('/todonts/6', {asynchronous:true, evalScripts:true, method:'put', onSuccess:function(request){
+                                        var li = element.up('li')
+                                        if(element.checked){
+                                           li.addClassName('complete')
+                                         }else{
+                                            li.removeClassName('complete')
+                                         };
+                                         li.highlight(); 
+                                         }, parameters:'todo[complete]=' + element.checked + '&authenticity_token=' + encodeURIComponent('wNqAr3/4sRWFEV3QAT//L8gNkO35Re2impKlBkbxxYQ=')})})
+        //]]>
+        </script>
+         
+        
+          <span class="name">Call Bill</span>
+          <div class="controls">
+            <a href="/todonts/6/edit">Edit</a> |
+            <a href="/todonts/6" onclick="if (confirm('Are you sure you want to remove \'Call Bill\'?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'wNqAr3/4sRWFEV3QAT//L8gNkO35Re2impKlBkbxxYQ='); f.appendChild(s);f.submit(); };return false;">Delete</a>
+        
+          </div>
+        </li><li class="todo complete" id="todo_7">  
+            <input name="todos[7][complete]" type="hidden" value="0" /><input checked="checked" id="todos_7_complete" name="todos[7][complete]" type="checkbox" value="1" />
+          
+          <script type="text/javascript">
+        //<![CDATA[
+        new Form.Element.EventObserver('todos_7_complete', function(element, value) {new Ajax.Request('/todonts/7', {asynchronous:true, evalScripts:true, method:'put', onSuccess:function(request){
+                                        var li = element.up('li')
+                                        if(element.checked){
+                                           li.addClassName('complete')
+                                         }else{
+                                            li.removeClassName('complete')
+                                         };
+                                         li.highlight(); 
+                                         }, parameters:'todo[complete]=' + element.checked + '&authenticity_token=' + encodeURIComponent('wNqAr3/4sRWFEV3QAT//L8gNkO35Re2impKlBkbxxYQ=')})})
+        //]]>
+        </script>
+         
+        
+          <span class="name">Buy 1% Milk</span>
+          <div class="controls">
+            <a href="/todonts/7/edit">Edit</a> |
+            <a href="/todonts/7" onclick="if (confirm('Are you sure you want to remove \'Buy 1% Milk\'?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'wNqAr3/4sRWFEV3QAT//L8gNkO35Re2impKlBkbxxYQ='); f.appendChild(s);f.submit(); };return false;">Delete</a>
+        
+          </div>
+        </li><li class="todo complete" id="todo_8">  
+            <input name="todos[8][complete]" type="hidden" value="0" /><input checked="checked" id="todos_8_complete" name="todos[8][complete]" type="checkbox" value="1" />
+          
+          <script type="text/javascript">
+        //<![CDATA[
+        new Form.Element.EventObserver('todos_8_complete', function(element, value) {new Ajax.Request('/todonts/8', {asynchronous:true, evalScripts:true, method:'put', onSuccess:function(request){
+                                        var li = element.up('li')
+                                        if(element.checked){
+                                           li.addClassName('complete')
+                                         }else{
+                                            li.removeClassName('complete')
+                                         };
+                                         li.highlight(); 
+                                         }, parameters:'todo[complete]=' + element.checked + '&authenticity_token=' + encodeURIComponent('wNqAr3/4sRWFEV3QAT//L8gNkO35Re2impKlBkbxxYQ=')})})
+        //]]>
+        </script>
+         
+        
+          <span class="name">Stop and smell the flowers</span>
+          <div class="controls">
+            <a href="/todonts/8/edit">Edit</a> |
+            <a href="/todonts/8" onclick="if (confirm('Are you sure you want to remove \'Stop and smell the flowers\'?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'wNqAr3/4sRWFEV3QAT//L8gNkO35Re2impKlBkbxxYQ='); f.appendChild(s);f.submit(); };return false;">Delete</a>
+        
+          </div>
+        </li>
+      </ul>
+      <p>
+        <a href="/todonts/new">New todo</a>  
+      </p>
+
+    </div>
+  </body>
+</html>

@@ -44,7 +44,6 @@ TodoList = Behavior.create({
                                        },
                                        parameters:'authenticity_token=' + encodeURIComponent(this.auth_token)});
       }
-      
     }
   })
 });
