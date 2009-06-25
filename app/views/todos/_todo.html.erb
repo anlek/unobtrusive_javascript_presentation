@@ -1,10 +1,11 @@
 <% content_tag_for(:li, todo, :class => "#{"complete" if todo.complete?}") do %>
-  <%- fields_for :todos, todo, :index => todo.id do |todo_fields| -%>
-    <%= todo_fields.check_box(:complete) %>
-  <%- end -%>
-  <span class="name"><%= todo.name %></span>
   <div class="controls">
     <%= link_to "Edit", edit_todo_path(todo) %> |
     <%= link_to "Delete", confirm_delete_todo_path(todo), :class => 'delete' %>
   </div>
+  <%- fields_for :todos, todo, :index => todo.id do |todo_fields| -%>
+    <%= todo_fields.check_box(:complete) %>
+  <%- end -%>
+  <span class="name"><%= todo.name %></span>
+  
 <% end %>
