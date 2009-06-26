@@ -9,13 +9,14 @@
     <%= yield(:head) %>
   </head>
   <body class="bad">
+    <h1 id="header">Unobtrusive JavaScript Demo - (Obtrusive Version)</h1>
     <div id="container">
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
       
       <div id="nav">
-        <%= link_to "Good todos", todos_path %>
+        <%= link_to "Go to the unobtrusive javascript version", todos_path %>
       </div>
       
       <%- if show_title? -%>
@@ -23,6 +24,10 @@
       <%- end -%>
       
       <%= yield %>
+    </div>
+    <div id="footer">
+      Site designed for a <%= link_to "presentation on Unobtrusive Javascript", 'http://blog.anlek.com/2009/06/unobtrusive-javascript-presentation/' %> by 
+                          <%= link_to "Andrew Kalek", 'http://blog.anlek.com' %>.
     </div>
   </body>
 </html>
